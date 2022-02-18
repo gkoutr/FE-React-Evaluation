@@ -1,0 +1,38 @@
+.navbar {
+    background-color: rgba(66, 80, 91, 1);
+}
+
+.nav-logo {
+    float: left;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+.nav-container {
+    display: flex;
+}
+.nav-logo img {
+    width: 250px;
+    height: 100%;
+}
+
+.navbar-right {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-right a, span{
+    color:white;
+}
+
+.nav-link {
+    padding-right: 25px;
+}
+
+nav {
+    background-color: rgba(66, 80, 91, 1);
+    display: flex;
+    flex-flow: row nowrap;
+}
