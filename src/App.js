@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 import { fakeInterests, fakeSkills } from "./dummy-data";
 import Login from "./components/Login/Login";
 import Navbar from "./components/Navbar/Navbar";
@@ -14,26 +14,29 @@ function App() {
 
   const onLoginHandler = () => {
     setIsLoggedIn(true);
-  }
+  };
 
   if (!isLoggedIn) {
-    return <Login onLogin={onLoginHandler}/>;
+    return <Login onLogin={onLoginHandler} />;
   }
   return (
     <div className="App">
       <Navbar />
       <div className="container">
-      <Switch>
-        <Route path="/home">
-          <Home />
-        </Route>
-        <Route path="/interests">
-          <Interests />
-        </Route>
-        <Route path="/skills">
-          <Skills />
-        </Route>
-      </Switch>
+        <Switch>
+          <Route exact path="/">
+            <Redirect to="/home" />
+          </Route>
+          <Route path="/home">
+            <Home />
+          </Route>
+          <Route path="/interests">
+            <Interests />
+          </Route>
+          <Route path="/skills">
+            <Skills />
+          </Route>
+        </Switch>
       </div>
     </div>
   );
