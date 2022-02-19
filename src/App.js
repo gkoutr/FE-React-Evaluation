@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import Interests from "./components/Interests/Interests";
 import Skills from "./components/Skills/Skills";
+import Interest from "./components/Interests/Interest";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -36,6 +37,7 @@ function App() {
           <Route path="/skills">
             <Skills />
           </Route>
+          <Route path="/interest/:id" component={Interest} />
         </Switch>
       </div>
     </div>

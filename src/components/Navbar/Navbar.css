@@ -21,6 +21,7 @@
 .navbar-right {
     display: flex;
     list-style: none;
+    margin: 30px 10px;
 }
 
 .navbar-right a, span{
@@ -29,6 +30,7 @@
 
 .nav-link {
     padding-right: 25px;
+    padding-left: 25px
 }
 
 nav {
