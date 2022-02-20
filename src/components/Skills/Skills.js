@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { fakeSkills } from "../../dummy-data";
 import Card from "../UI/Card";
+import './Skills.css';
+
 const Skills = () => {
+  const [skills, setSkills] = useState(fakeSkills);
+
   return (
     <div className="skills-row">
-      {fakeSkills.map((skill) => (
+      {skills.map((skill) => (
         <Link
           key={skill.id}
           to={{

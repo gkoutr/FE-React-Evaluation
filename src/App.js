@@ -10,7 +10,7 @@ import Interest from "./components/Interests/Interest";
 import Skill from "./components/Skills/Skill";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const onLoginHandler = () => {
     setIsLoggedIn(true);
