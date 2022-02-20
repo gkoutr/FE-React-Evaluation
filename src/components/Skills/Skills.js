@@ -1,16 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { fakeSkills } from "../../dummy-data";
+import Card from "../UI/Card";
 const Skills = () => {
   return (
-    <div>
+    <div className="skills-row">
       {fakeSkills.map((skill) => (
-        <div className="skill-card">
-          <h2>Skill {skill.id}</h2>
-          <strong>NAME:</strong>
-          <p>{skill.name}</p>
-          <strong>Type: </strong>
-          <p>{skill.type}</p>
-        </div>
+        <Link
+          key={skill.id}
+          to={{
+            pathname: `/skill/${skill.id}`,
+            state: { skill: skill },
+          }}
+        >
+          <Card key={skill.id} data={skill} name="Skill" />
+        </Link>
       ))}
     </div>
   );

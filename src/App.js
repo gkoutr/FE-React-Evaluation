@@ -1,17 +1,16 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import { Redirect, Route, Switch } from "react-router-dom";
-import { fakeInterests, fakeSkills } from "./dummy-data";
 import Login from "./components/Login/Login";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import Interests from "./components/Interests/Interests";
 import Skills from "./components/Skills/Skills";
 import Interest from "./components/Interests/Interest";
+import Skill from "./components/Skills/Skill";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   const onLoginHandler = () => {
     setIsLoggedIn(true);
@@ -38,6 +37,7 @@ function App() {
             <Skills />
           </Route>
           <Route path="/interest/:id" component={Interest} />
+          <Route path="/skill/:id" component={Skill} />
         </Switch>
       </div>
     </div>
