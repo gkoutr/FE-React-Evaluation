@@ -1,0 +1,18 @@
+.skill-page {
+    text-align: left;
+}
+
+.skill-page .skill-type {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+}
+
+.shape {
+    background-color: lightblue;
+    height: 25px;
+    width: 125px;
+}
